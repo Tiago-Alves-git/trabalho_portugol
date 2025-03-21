@@ -1,130 +1,128 @@
-# trabalho_portugol
-
-**Documentacao do Programa: Comparador de Juros Simples e Compostos em Portugol**
+# Trabalho Portugol
 
 ---
 
-# 1. Introducao
-Este documento tem como objetivo explicar de forma detalhada o funcionamento do programa escrito em Portugol, que compara o crescimento de uma divida com juros simples e com juros compostos. O programa calcula e exibe os valores mes a mes, demonstrando a diferenca e o impacto desses dois tipos de juros.
+# Comparador de Juros Simples e Compostos
+
+## **1. Introdução**
+
+Bem-vindo ao comparador de juros simples e compostos! Este programa foi criado para te ajudar a visualizar como uma dívida cresce ao longo do tempo, utilizando duas formas de cálculo de juros: os **juros simples** e os **juros compostos**. Ele calcula mês a mês quanto você pagaria com cada tipo de juros, e mostra como essas duas formas afetam o valor da dívida. 
+
+A ideia é te ajudar a entender como as dívidas funcionam e como os juros compostos, por exemplo, podem ser um grande desafio para as finanças pessoais.
 
 ---
 
-# 2. Onde Precisamos Ter Cuidado com os Juros Compostos no Nosso Dia a Dia
-Os **juros compostos** estao presentes em diversas situacoes financeiras do cotidiano e representam um grande risco quando associados a **dividas**. O crescimento exponencial faz com que pequenas dividas se tornem rapidamente valores impagaveis.
+## **2. Como os Juros Compostos Afetam as Dívidas no Dia a Dia**
 
-## Onde os Juros Compostos Sao Comuns (e Perigosos):
+Os **juros compostos** estão por trás de muitos produtos financeiros que usamos no dia a dia. Eles fazem a dívida crescer de forma exponencial, ou seja, vão se acumulando sobre os próprios juros. Isso pode fazer com que uma dívida aparentemente pequena se torne muito maior com o tempo.
 
-### Cartao de Credito
-- Ao nao pagar a **fatura completa**, o saldo devedor eh financiado com **juros compostos mensais**, que podem superar **12% ao mes**.
-- Uma divida de R$ 500,00 pode dobrar de valor em poucos meses.
-- Por isso, eh fundamental pagar sempre a fatura integral para evitar a "bola de neve".
+### **Onde os Juros Compostos São Comuns:**
 
-### Cheque Especial
-- Funciona de maneira semelhante ao cartao, com **altas taxas compostas**.
+- **Cartão de Crédito**: Quando você não paga a fatura completa, a dívida vai crescendo com **juros compostos mensais**. A taxa pode ser alta, chegando a mais de 12% ao mês.
+- **Cheque Especial**: Funciona da mesma maneira, com taxas compostas que podem ser muito altas.
+- **Empréstimos Mal Planejados**: Se não forem bem planejados, muitos empréstimos têm juros compostos, o que pode fazer você pagar muito mais do que emprestou.
 
-### Emprestimos Mal Planejados
-- Muitas vezes possuem **juros compostos**, tornando o valor final pago muito superior ao valor originalmente emprestado.
+### **Como Podemos Usar Juros Simples a Nosso Favor:**
 
-## Como Podemos Usar Melhor o Juros Simples:
-
-### Emprestimos Pessoais com Juros Simples
-- Custo previsivel e menor, sem juros sobre juros.
-
-### Negociacao de Dividas
-- Busque propostas onde o saldo devedor seja recalculado sem juros compostos, com base apenas em juros simples.
-
-### Educacao e Planejamento
-- Entender a diferenca entre juros simples e compostos evita armadilhas financeiras. O programa apresentado ajuda nessa visualizacao.
-
-### Conclusao
-- Evite juros compostos ao dever dinheiro, mas aproveite-os ao investir.
+- **Empréstimos Pessoais com Juros Simples**: São mais fáceis de entender, e o valor da dívida aumenta de forma previsível, sem juros sobre juros.
+- **Negociação de Dívidas**: Quando possível, negocie dívidas para que sejam recalculadas com juros simples, evitando surpresas.
+- **Planejamento Financeiro**: Compreender a diferença entre juros simples e compostos é essencial para tomar decisões financeiras mais inteligentes.
 
 ---
 
-# 3. Estrutura Geral do Programa
-O programa esta dividido em:
+## **3. Como Funciona o Programa**
 
-- Declaracao de variaveis.
-- Entrada de dados.
-- Calculo dos juros simples e compostos.
-- Exibicao dos valores mes a mes.
-- Exibicao dos resultados finais.
+O programa realiza a simulação de uma dívida com juros simples e compostos e exibe os resultados mês a mês. A estrutura do programa é bem simples e vai te guiar por todo o processo:
+
+1. **Declaração de variáveis**: onde as informações da dívida e as taxas de juros são armazenadas.
+2. **Entrada de dados**: o programa solicita que você insira o valor da dívida e o tempo de pagamento.
+3. **Cálculo dos juros**: o programa calcula quanto você pagaria com juros simples e compostos, mês a mês.
+4. **Exibição dos resultados**: ao final, o programa exibe os valores totais de cada tipo de juros e a diferença entre eles.
 
 ---
 
-# 4. Explicacao Detalhada por Linha
+## **4. Explicação do Código**
 
-### Linha 01: programa
-Define o inicio do programa em Portugol. Eh obrigatorio.
+### Linha 1: `programa`
 
-### Linha 02: funcao inicio()
-Todo programa em Portugol comeca sua execucao dentro da funcao "inicio".
+Define o início do programa.
 
-### Linhas 04 a 10: Declaracao de variaveis
-Declaramos variaveis para armazenar:
-- **divida**: valor inicial informado pelo usuario.
-- **taxa_juros_simples / compostos**: taxa de juros usada no calculo.
-- **montante_simples / composto**: valor acumulado em cada tipo de juros.
-- **juros_simples / compostos**: total de juros acumulados.
-- **simples_mes / composto_mes / diferenca**: valores de controle mes a mes.
-- **meses / i**: controle de iteracao.
+### Linha 2: `função início()`
 
-### Linha 12 a 14: Definicao das taxas
-Taxas fixas de **12% ao mes**, simulando a media de juros de cartao de credito no Brasil.
+A função "início" é o ponto de partida do programa. Todo programa em Portugol começa aqui.
+
+### Linhas 4 a 10: Declaração de variáveis
+
+Aqui declaramos as variáveis que vamos usar para armazenar os dados:
+- **divida**: o valor inicial da dívida.
+- **taxa_juros_simples** e **taxa_juros_compostos**: as taxas de juros para simples e compostos.
+- **montante_simples** e **montante_composto**: o valor acumulado da dívida com cada tipo de juros.
+- **juros_simples** e **juros_compostos**: os juros totais calculados ao final.
+
+### Linhas 12 a 14: Definição das taxas de juros
+
+Aqui, definimos as taxas de juros para simular a média do cartão de crédito no Brasil: 12% ao mês para ambos os tipos de juros.
 
 ### Linha 16 a 21: Entrada de dados
-Solicita ao usuario o valor da divida e o prazo em meses.
 
-### Linha 23 a 26: Cabecalho da simulacao
-Informa ao usuario as taxas e estrutura da exibicao dos dados.
+O programa solicita que você insira o valor da dívida e o número de meses para o pagamento. Essas informações são usadas para calcular os juros.
 
-### Linha 29 a 30: Inicializacao dos montantes
-Define o ponto de partida: a divida original.
+### Linha 23 a 26: Cabeçalho da simulação
 
-### Linha 32 a 46: Laco de repeticao para calculo mes a mes
-Para cada mes, calcula:
-- **simples_mes**: usando a formula de juros simples.
-- **composto_mes**: usando a funcao potencia para simular juros compostos.
-- **diferenca**: diferenca entre os dois montantes.
+O programa exibe as taxas de juros e prepara você para a simulação, mostrando o que será calculado.
 
-A exibicao eh feita com duas casas decimais atraves da funcao escrevaArrendondado.
+### Linhas 29 a 30: Inicialização dos montantes
 
-### Linha 48 a 55: Calculo dos resultados finais
-Calcula o total de juros acumulados e os montantes finais para simples e compostos.
+Aqui o programa define o valor inicial da dívida para os cálculos de juros simples e compostos.
 
-### Linha 57 a 66: Exibicao dos resultados finais
-Mostra o resumo geral com os valores acumulados e a diferenca entre eles apos o periodo total.
+### Linhas 32 a 46: Laço de repetição (cálculo mês a mês)
+
+Durante os meses, o programa calcula:
+- O valor com **juros simples** (com uma fórmula simples de multiplicação).
+- O valor com **juros compostos** (utilizando uma função de potência).
+- A diferença entre os dois valores.
+
+Ele vai exibindo os resultados mês a mês, para que você veja claramente a diferença.
+
+### Linha 48 a 55: Cálculo dos resultados finais
+
+Ao final do período, o programa calcula o total de juros pagos em ambos os tipos e o valor final da dívida.
+
+### Linha 57 a 66: Exibição dos resultados finais
+
+Aqui o programa exibe um resumo com os totais de juros pagos e a diferença entre juros compostos e simples, para te ajudar a visualizar como cada tipo de juros impacta no valor final.
 
 ### Linha 68: Mensagem final
-Alerta sobre os riscos dos juros compostos em dividas como cartao de credito.
+
+O programa termina alertando sobre os riscos dos juros compostos, especialmente em dívidas como as de cartão de crédito.
 
 ---
 
-# 5. Funcoes Criadas no Programa
+## **5. Funções Criadas no Programa**
 
-## escrevaArrendondado(real valor)
-Funcao que exibe um numero com duas casas decimais.
-- Calcula a parte inteira do valor.
-- Calcula as duas casas decimais multiplicando a parte fracionaria por 100.
-- Corrige valores negativos.
-- Adiciona um zero a esquerda se necessario.
+### `escrevaArrendondado(valor)`
 
-## potencia(real base, inteiro expoente)
-Funcao que simula a operacao de potenciacao.
-- Multiplica a base sucessivamente pelo numero de vezes indicado no expoente.
+Essa função é usada para exibir os valores de forma bonita, com duas casas decimais. Assim, o número fica mais fácil de ler.
+
+### `potencia(base, expoente)`
+
+Esta função simula o cálculo de potências. Ela é usada para calcular os juros compostos, pois os juros se acumulam exponencialmente.
 
 ---
 
-# 6. Observacoes Finais
-- O programa usa taxas de juros padrao, mas elas podem ser alteradas facilmente.
-- Eh importante lembrar que os juros compostos aumentam exponencialmente, enquanto os simples aumentam linearmente.
-- Esta simulacao serve como ferramenta educativa e pode ser adaptada para diferentes cenarios financeiros.
+## **6. Observações Finais**
+
+- As taxas de juros usadas são padrão, mas você pode alterá-las facilmente para testar outros cenários.
+- Lembre-se: **juros compostos** podem ser perigosos, pois aumentam rapidamente. Já os **juros simples** são mais previsíveis e fáceis de controlar.
+- Essa simulação é uma ferramenta educativa e pode ser adaptada para diferentes situações financeiras.
 
 ---
 
-# 7. Codigo Completo Usado na Simulacao
+## **7. Código Completo**
 
-```
+Aqui está o código completo que você pode usar no seu programa:
+
+```portugol
 programa
 {
     funcao inicio()
@@ -231,4 +229,3 @@ programa
     }
 }
 ```
-
